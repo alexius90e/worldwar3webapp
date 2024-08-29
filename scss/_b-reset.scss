@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('../fonts/ComicSansMS.ttf') format('truetype');
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: $black;
+  background-color: $white;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Comic Sans MS', sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

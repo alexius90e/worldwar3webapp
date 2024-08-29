@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  max-width: 360px;
+  width: 100%;
+  padding: 13px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+  background-color: #ba242d;
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    filter: brightness(1.2);
+  }
+}
