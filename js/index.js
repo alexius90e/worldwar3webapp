@@ -8,7 +8,6 @@ function showAlert(alert) {
 
   if ((alerts, alertsItem)) {
     alertsItem.innerText = String(alert);
-    console.log(alertsItem.innerText);
     alerts.classList.add('active');
     alertsItem.classList.add(`alerts__item_${alert}`);
 
@@ -74,5 +73,29 @@ if (walletSwapForm) {
 if (walletTokensCardPointsInfoButton) {
   walletTokensCardPointsInfoButton.addEventListener('click', () => {
     showModal(modals.points);
+  });
+}
+
+const walletInfoMore = document.querySelector('.wallet__info-more');
+
+if (walletInfoMore) {
+  walletInfoMore.addEventListener('click', (event) => {
+    const isMoreElem = event.target === event.currentTarget;
+    const isMoreButton = event.target.classList.contains('wallet__info-more-button');
+    const isCopyButton = event.target.classList.contains('wallet__info-more-modal-seed-copy');
+
+    if (isMoreElem) {
+      event.currentTarget.classList.remove('active');
+    }
+
+    if (isMoreButton) {
+      event.currentTarget.classList.add('active');
+    }
+
+    if (isCopyButton) {
+      showAlert(alerts.copied);
+      event.currentTarget.classList.remove('active');
+      navigator.clipboard.writeText(event.currentTarget.dataset.code);
+    }
   });
 }

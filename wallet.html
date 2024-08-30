@@ -25,7 +25,20 @@
             <div class="wallet__info-crypto">5000000 TRX</div>
             <div class="wallet__info-currency">$5516.661</div>
 
-            <button class="wallet__info-more"></button>
+            <div class="wallet__info-more" data-code="Export seed phrase">
+              <button class="wallet__info-more-button"></button>
+
+              <div class="wallet__info-more-modal">
+                <div class="wallet__info-more-modal-seed">
+                  <span class="wallet__info-more-modal-seed-phrase">Export seed phrase</span>
+                  <button class="wallet__info-more-modal-seed-copy"></button>
+                </div>
+
+                <div class="wallet__info-more-modal-warning">
+                  Warning: Don't do it if you don't know what it is
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="wallet__tokens">
@@ -220,7 +233,6 @@
             <span>100,000,000</span>
             <span>WW3</span>
           </li>
-
 
           <li class="modal__list-item">
             <b>Transaction fee:</b>
