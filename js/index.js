@@ -55,12 +55,16 @@ modalElems.forEach((modal) => {
   modal.addEventListener('click', (event) => {
     const isModal = event.target === event.currentTarget;
     const isButton = event.target.classList.contains('button');
+    const isButtonConfirm = event.target.classList.contains('button_confirm');
 
     if (isModal || isButton) closeModal(modal);
+
+    if (isButtonConfirm) showAlert(alerts.complete);;
   });
 });
 
 const walletSwapForm = document.querySelector('.wallet__swap-form');
+const withdrawForm = document.querySelector('.withdraw__swap-form');
 const walletTokensCardPointsInfoButton = document.querySelector('.wallet__tokens-card-points-info');
 
 if (walletSwapForm) {
@@ -69,6 +73,14 @@ if (walletSwapForm) {
     showModal(modals.swap);
   });
 }
+
+if (withdrawForm) {
+  withdrawForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    showModal(modals.withdraw);
+  });
+}
+
 
 if (walletTokensCardPointsInfoButton) {
   walletTokensCardPointsInfoButton.addEventListener('click', () => {

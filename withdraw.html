@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WW3</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main class="main">
+      <section class="withdraw">
+        <div class="container">
+          <div class="withdraw__controls">
+            <a class="withdraw__controls-back" href="./wallet.html"></a>
+
+            <div class="custom-select" data-value="trx">
+              <select id="network" name="network">
+                <option value="trx">TRON NETWORK</option>
+                <option value="ww3">WW3 NETWORK</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="withdraw__swap">
+            <div class="withdraw__swap-heading">
+              <span class="withdraw__swap-heading-title">Withdraw</span>
+              <span class="withdraw__swap-heading-limit">Max: 5000000 TRX</span>
+            </div>
+
+            <form class="withdraw__swap-form">
+              <fieldset class="withdraw__swap-form-fieldset">
+                <input
+                  class="withdraw__swap-form-input"
+                  type="number"
+                  id="source"
+                  name="source"
+                  value="5000000"
+                />
+
+                <div class="custom-select" data-value="trx">
+                  <select id="sourceToken" name="sourceToken">
+                    <option value="trx">TRX</option>
+                    <option value="ww3">WW3</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <fieldset class="withdraw__swap-form-fieldset">
+                <label class="withdraw__swap-form-label">
+                  <span class="withdraw__swap-form-label-text">To whom</span>
+
+                  <input
+                    class="withdraw__swap-form-input"
+                    type="text"
+                    id="target"
+                    name="target"
+                    value="0x6982...bE47a25d4ec3d2311933"
+                    disabled
+                  />
+                </label>
+              </fieldset>
+
+              <fieldset class="withdraw__swap-form-fieldset">
+                <button class="button">SWAP</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="alerts">
+      <div class="alerts__item"></div>
+    </div>
+
+    <div class="modal modal_complete-withdraw">
+      <div class="modal__body">
+        <h3 class="modal__title">Complete withdraw</h3>
+
+        <p class="modal__description">
+          Before swapping, make sure that all the data is entered correctly, be careful!
+        </p>
+
+        <ul class="modal__list">
+          <li class="modal__list-item">
+            <b>You send:</b>
+            <span>5,000,000</span>
+            <span>TRX</span>
+          </li>
+
+          <li class="modal__list-item">
+            <b>This wallet</b>
+            <span>0x6982...bE47a25d4ec3d2311933</span>
+          </li>
+
+          <li class="modal__list-item">
+            <b>Transaction fee:</b>
+            <span>450</span>
+            <span>TRX</span>
+          </li>
+
+          <li class="modal__list-item">
+            <b>You will earn:</b>
+            <span>50</span>
+            <span>POINTS</span>
+          </li>
+        </ul>
+
+        <div class="modal__buttons">
+          <button class="button button_confirm">confirm</button>
+          <button class="button button_light">cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

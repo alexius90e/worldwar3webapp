@@ -433,7 +433,7 @@ img {
   box-shadow: 0 4px 20px 12px rgba(0, 0, 0, 0.14);
   background: #a5a5a5;
   transform: translateY(-100vh);
-  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.4s;
 }
 .active .wallet__info-more-modal {
   transform: translateY(0);
@@ -740,6 +740,232 @@ img {
   background-color: #ba242d;
 }
 
+.withdraw .container {
+  min-height: 100dvh;
+  padding: 65px 15px 30px;
+  box-sizing: border-box;
+}
+.withdraw__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 20px;
+}
+.withdraw__controls-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #a5a5a5;
+}
+.withdraw__controls-back::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../assets/arrow-right-md.svg) center no-repeat;
+  background-size: 24px;
+  transform: rotate(90deg);
+}
+.withdraw__controls .custom-select {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.withdraw__controls .custom-select__selected {
+  padding: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #a5a5a5;
+  border: 1px solid #a5a5a5;
+  border-radius: 12px;
+  background-color: #f9f7f3;
+}
+.withdraw__controls .custom-select__selected::before {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+.withdraw__controls .custom-select[data-value=trx] .custom-select__selected::before {
+  content: "";
+  background-image: url(../assets/tron.svg);
+}
+.withdraw__controls .custom-select[data-value=ww3] .custom-select__selected::before {
+  content: "";
+  background-image: url(../assets/ww3.png);
+}
+.withdraw__controls .custom-select__item::before {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.withdraw__controls .custom-select__item[data-token=trx]::before {
+  content: "";
+  background-image: url(../assets/tron.svg);
+}
+.withdraw__controls .custom-select__item[data-token=ww3]::before {
+  content: "";
+  background-image: url(../assets/ww3.png);
+}
+.withdraw__swap {
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+.withdraw__swap-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+.withdraw__swap-form-fieldset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.withdraw__swap-form-fieldset:first-child {
+  position: relative;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid #a5a5a5;
+}
+.withdraw__swap-form-fieldset:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  background: url(../assets/arrow-right-md.svg) center no-repeat;
+  background-color: #a5a5a5;
+  transform: translate3d(-50%, 50%, 0);
+}
+.withdraw__swap-form-fieldset > .custom-select {
+  flex: 0 0 100px;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 44px;
+  width: 100px;
+  padding: 0;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__selected-text {
+  margin-left: 6px;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__selected::before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.withdraw__swap-form-fieldset > .custom-select[data-value=trx] .custom-select__selected::before {
+  background-image: url(../assets/tron.svg);
+}
+.withdraw__swap-form-fieldset > .custom-select[data-value=ww3] .custom-select__selected::before {
+  background-image: url(../assets/ww3.png);
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__items {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  background-color: #d9d9d9;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 44px;
+  width: 100px;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #a8a8a8;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__item:last-child {
+  border-bottom: none;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__item::before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__item[data-token=trx]::before {
+  background-image: url(../assets/tron.svg);
+}
+.withdraw__swap-form-fieldset > .custom-select .custom-select__item[data-token=ww3]::before {
+  background-image: url(../assets/ww3.png);
+}
+.withdraw__swap-form-fieldset:last-child {
+  margin-top: 20px;
+}
+.withdraw__swap-form-input {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+.withdraw__swap-form-input[type=number] {
+  -moz-appearance: textfield;
+}
+.withdraw__swap-form-input[type=number]::-webkit-outer-spin-button, .withdraw__swap-form-input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.withdraw__swap-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.withdraw__swap-form-label-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+.withdraw__swap-form-label input:disabled {
+  color: #000;
+}
+.withdraw__swap-form .button {
+  max-width: none;
+}
+
 .alerts {
   position: fixed;
   top: 0;
@@ -767,6 +993,7 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 110%;
+  text-transform: capitalize;
   color: #fff;
   border-radius: 8px;
   background: #a5a5a5;
