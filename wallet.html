@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WW3</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main class="main">
+      <section class="wallet">
+        <div class="container">
+          <div class="wallet__network">
+            <div class="wallet__network-value wallet__network-value_tron">TRON NETWORK</div>
+          </div>
+
+          <div class="wallet__info">
+            <div class="wallet__info-code" data-code="TWjA...oVGQpjW2P1agx">
+              <span class="wallet__info-code-text">TWjA...oVGQpjW2P1agx</span>
+              <button class="wallet__info-code-copy"></button>
+            </div>
+            <div class="wallet__info-crypto">5000000 TRX</div>
+            <div class="wallet__info-currency">$5516.661</div>
+
+            <button class="wallet__info-more"></button>
+          </div>
+
+          <div class="wallet__tokens">
+            <div class="wallet__tokens-card">
+              <figure class="wallet__tokens-card-icon">
+                <img class="wallet__tokens-card-icon-image" src="./assets/trx.svg" alt="trx" />
+              </figure>
+
+              <div class="wallet__tokens-card-info">
+                <div class="wallet__tokens-card-info-title">TRX</div>
+                <div class="wallet__tokens-card-info-value">5000000 TRX</div>
+              </div>
+
+              <div class="wallet__tokens-card-status"></div>
+            </div>
+
+            <div class="wallet__tokens-card">
+              <figure class="wallet__tokens-card-icon">
+                <img class="wallet__tokens-card-icon-image" src="./assets/ww3.png" alt="ww3" />
+              </figure>
+
+              <div class="wallet__tokens-card-info">
+                <div class="wallet__tokens-card-info-title">WW3 TOKEN</div>
+                <div class="wallet__tokens-card-info-value">100,000,000 WW3</div>
+              </div>
+
+              <div class="wallet__tokens-card-status"></div>
+            </div>
+
+            <div class="wallet__tokens-card wallet__tokens-card_points">
+              <figure class="wallet__tokens-card-icon">
+                <img
+                  class="wallet__tokens-card-icon-image"
+                  src="./assets/points-icon.svg"
+                  alt="points"
+                />
+              </figure>
+
+              <div class="wallet__tokens-card-info">
+                <div class="wallet__tokens-card-info-title">POINTS</div>
+              </div>
+
+              <div class="wallet__tokens-card-points">
+                <span class="wallet__tokens-card-points-value">5516</span>
+                <button class="wallet__tokens-card-points-info">?</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="wallet__swap">
+            <div class="wallet__swap-heading">
+              <span class="wallet__swap-heading-title">Swap</span>
+              <span class="wallet__swap-heading-limit">Max: 5000000 TRX</span>
+            </div>
+
+            <form class="wallet__swap-form">
+              <fieldset class="wallet__swap-form-fieldset">
+                <input
+                  class="wallet__swap-form-input"
+                  type="number"
+                  id="source"
+                  name="source"
+                  value="5000000"
+                />
+
+                <div class="custom-select" data-value="trx">
+                  <select id="sourceToken" name="sourceToken">
+                    <option value="trx">TRX</option>
+                    <option value="ww3">WW3</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <fieldset class="wallet__swap-form-fieldset">
+                <input
+                  class="wallet__swap-form-input"
+                  type="number"
+                  id="target"
+                  name="target"
+                  value="100000000"
+                />
+
+                <div class="custom-select" data-value="ww3">
+                  <select id="targetToken" name="targetToken">
+                    <option value="ww3">WW3</option>
+                    <option value="trx">TRX</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <fieldset
+                class="wallet__swap-form-fieldset wallet__swap-form-fieldset_speed wallet__swap-form-speed"
+              >
+                <div class="wallet__swap-form-speed-title">Speed:</div>
+
+                <div class="wallet__swap-form-speed-inputs">
+                  <label class="wallet__swap-form-speed-label">
+                    <span class="wallet__swap-form-speed-label-text">Default</span>
+                    <input type="radio" id="speedDefault" name="speed" value="default" checked />
+                  </label>
+
+                  <label class="wallet__swap-form-speed-label">
+                    <span class="wallet__swap-form-speed-label-text">Fast</span>
+                    <input type="radio" id="speedFast" name="speed" value="fast" />
+                  </label>
+
+                  <label class="wallet__swap-form-speed-label">
+                    <span class="wallet__swap-form-speed-label-text">Instant</span>
+                    <input type="radio" id="speedInstant" name="speed" value="instant" />
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="wallet__swap-form-fieldset">
+                <button class="button">SWAP</button>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="wallet__follow">
+            <figure class="wallet__follow-figure">
+              <img class="wallet__follow-figure-image" src="./assets/follow-x.jpg" alt="follow">
+            </figure>
+
+            <a class="wallet__follow-link" href="#">follow our x</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
