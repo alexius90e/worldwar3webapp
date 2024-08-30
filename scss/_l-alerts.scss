@@ -1,0 +1,60 @@
+.alerts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+
+  &.active {
+    z-index: 100;
+    pointer-events: all;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 140px;
+    height: 38px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 110%;
+    color: #fff;
+    border-radius: 8px;
+    background: #a5a5a5;
+    transition: all ease-in-out 0.2s;
+    transform: translateY(-400px);
+
+    .active & {
+      transform: translateY(10px);
+    }
+
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-size: 18px;
+      filter: brightness(10);
+    }
+
+    &_copied {
+      &::before {
+        content: '';
+        background: url(../assets/copy-wh.svg) center no-repeat;
+      }
+    }
+
+    &_complete {
+      &::before {
+        content: '';
+        background: url(../assets/completed-wh.svg) center no-repeat;
+      }
+    }
+  }
+}
