@@ -12,7 +12,7 @@
   border: 2px solid #000;
   border-radius: 12px;
   background-color: #ba242d;
-  transition-property: filter;
+  transition-property: filter, transform;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
   cursor: pointer;
@@ -22,6 +22,7 @@
   }
 
   &:active {
+    transform: scale(0.98);
     filter: brightness(1.2);
   }
 }
