@@ -25,4 +25,8 @@
     transform: scale(0.98);
     filter: brightness(1.2);
   }
+
+  &_light {
+    background-color: #a5a5a5;
+  }
 }

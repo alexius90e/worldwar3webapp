@@ -69,6 +69,9 @@ img {
   transform: scale(0.98);
   filter: brightness(1.2);
 }
+.button_light {
+  background-color: #a5a5a5;
+}
 
 .custom-select {
   position: relative;
@@ -726,4 +729,98 @@ img {
 .alerts__item_complete::before {
   content: "";
   background: url(../assets/completed-wh.svg) center no-repeat;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+  background: rgba(32, 32, 32, 0);
+}
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  pointer-events: all;
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  background: rgba(32, 32, 32, 0.5);
+  transition-property: z-index;
+  transition-delay: 0.1s;
+}
+.modal__body {
+  max-width: calc(100vw - 40px);
+  width: 360px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: transform ease-in-out 0.2s;
+  transform: translateY(-100vh);
+}
+.active .modal__body {
+  transform: translateY(0);
+}
+.modal__title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #000;
+}
+.modal__description {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #a5a5a5;
+}
+.modal__text {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.modal__list-item {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+.modal__list-item b {
+  font-weight: 700;
+}
+.modal__points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 24px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+.modal__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0;
 }
