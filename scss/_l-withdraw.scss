@@ -63,7 +63,7 @@
 
       &[data-value='ww3'] .custom-select__selected::before {
         content: '';
-        background-image: url(../assets/ww3.png);
+        background-image: url(../assets/ww3.svg);
       }
 
       &__item {
@@ -83,7 +83,7 @@
 
         &[data-token='ww3']::before {
           content: '';
-          background-image: url(../assets/ww3.png);
+          background-image: url(../assets/ww3.svg);
         }
       }
     }
@@ -167,7 +167,7 @@
           }
 
           &[data-value='ww3'] .custom-select__selected::before {
-            background-image: url(../assets/ww3.png);
+            background-image: url(../assets/ww3.svg);
           }
 
           & .custom-select__items {
@@ -210,7 +210,7 @@
             }
 
             &[data-token='ww3']::before {
-              background-image: url(../assets/ww3.png);
+              background-image: url(../assets/ww3.svg);
             }
           }
         }

@@ -617,7 +617,7 @@ img {
   background-image: url(../assets/tron.svg);
 }
 .wallet__swap-form-fieldset > .custom-select[data-value=ww3] .custom-select__selected::before {
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .wallet__swap-form-fieldset > .custom-select .custom-select__items {
   top: 0;
@@ -655,7 +655,7 @@ img {
   background-image: url(../assets/tron.svg);
 }
 .wallet__swap-form-fieldset > .custom-select .custom-select__item[data-token=ww3]::before {
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .wallet__swap-form-input {
   display: inline-block;
@@ -799,7 +799,7 @@ img {
 }
 .withdraw__controls .custom-select[data-value=ww3] .custom-select__selected::before {
   content: "";
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .withdraw__controls .custom-select__item::before {
   display: inline-block;
@@ -815,7 +815,7 @@ img {
 }
 .withdraw__controls .custom-select__item[data-token=ww3]::before {
   content: "";
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .withdraw__swap {
   padding: 12px;
@@ -887,7 +887,7 @@ img {
   background-image: url(../assets/tron.svg);
 }
 .withdraw__swap-form-fieldset > .custom-select[data-value=ww3] .custom-select__selected::before {
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .withdraw__swap-form-fieldset > .custom-select .custom-select__items {
   top: 0;
@@ -925,7 +925,7 @@ img {
   background-image: url(../assets/tron.svg);
 }
 .withdraw__swap-form-fieldset > .custom-select .custom-select__item[data-token=ww3]::before {
-  background-image: url(../assets/ww3.png);
+  background-image: url(../assets/ww3.svg);
 }
 .withdraw__swap-form-fieldset:last-child {
   margin-top: 20px;
