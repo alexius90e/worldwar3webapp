@@ -6,7 +6,8 @@
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
-    border: 1px solid #000;
+    margin-bottom: 40px;
+    border: 1px solid #000000;
     border-radius: 20px;
     background: url(../assets/social-user-bg.jpg) top center / cover no-repeat;
 
@@ -16,7 +17,7 @@
       flex: 0 0 calc(50% - 5px);
       padding: 12px;
       box-sizing: border-box;
-      border: 1px solid #000;
+      border: 1px solid #000000;
       border-radius: 12px;
       background-color: #f5f3ee;
 
@@ -24,7 +25,7 @@
         margin: 0 0 10px;
         height: 126px;
         box-sizing: border-box;
-        border: 2px solid #000;
+        border: 2px solid #000000;
         border-radius: 12px;
 
         &-image {
@@ -42,7 +43,7 @@
         line-height: 150%;
         letter-spacing: -0.05em;
         text-align: center;
-        color: #000;
+        color: #000000;
       }
 
       &-income {
@@ -68,7 +69,7 @@
         height: 24px;
         width: 24px;
         box-sizing: border-box;
-        border: 1px solid #000;
+        border: 1px solid #000000;
         border-radius: 6px;
         background: url(../assets/more-arrow.svg) center no-repeat;
         background-color: #ba242d;
@@ -98,7 +99,7 @@
         line-height: 125%;
         letter-spacing: -0.05em;
         text-align: center;
-        color: #000;
+        color: #000000;
         border-radius: 12px;
 
         &_empty {
@@ -112,7 +113,7 @@
         line-height: 150%;
         letter-spacing: -0.05em;
         text-align: center;
-        color: #000;
+        color: #000000;
       }
 
       &-income {
@@ -138,7 +139,7 @@
         height: 24px;
         width: 24px;
         box-sizing: border-box;
-        border: 1px solid #000;
+        border: 1px solid #000000;
         border-radius: 6px;
         background: url(../assets/more-arrow.svg) center no-repeat;
         background-color: #ba242d;
@@ -195,13 +196,130 @@
         height: 24px;
         width: 24px;
         box-sizing: border-box;
-        border: 1px solid #000;
+        border: 1px solid #000000;
         border-radius: 6px;
         background: url(../assets/more-arrow.svg) center no-repeat;
         background-color: #ba242d;
         transform: translate3d(8px, -8px, 0);
         cursor: pointer;
       }
+    }
+  }
+
+  &__quests {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+
+    &-title {
+      margin: 0 0 20px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 200%;
+      letter-spacing: -0.05em;
+      color: #000000;
+    }
+
+    &-content {
+      display: flex;
+      gap: 20px;
+      overflow: auto;
+      padding: 0 0 28px;
+
+      &::-webkit-scrollbar {
+        width: 13px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba($color: #f9f7f3, $alpha: 0);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background: #d0ccc2;
+      }
+    }
+
+    &-item {
+      flex: 0 0 calc(100% + 30px);
+      max-width: 340px;
+      box-sizing: border-box;
+      border: 2px solid #000000;
+      border-radius: 20px;
+      background-color: #dcd8cf;
+
+      &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 8px 30px 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.05em;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 16px 16px 0 0;
+        background-color: #1d1c1a;
+      }
+
+      &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 196px;
+        padding: 30px 20px 20px;
+        box-sizing: border-box;
+      }
+
+      &-text {
+        flex: 1 1 auto;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 250%;
+        letter-spacing: -0.05em;
+        text-align: center;
+        color: #000000;
+
+        & a {
+          color: #000000;
+        }
+      }
+
+      &-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &_done &-controls .button,
+      &_expired &-controls .button {
+        background-color: #3e3e3e;
+        pointer-events: none;
+        cursor: none;
+      }
+
+      &_expired {
+        opacity: 0.5;
+      }
+    }
+
+    &-more {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      box-sizing: border-box;
+      border: 1px solid #000000;
+      border-radius: 6px;
+      background: url(../assets/more-arrow.svg) center no-repeat;
+      background-color: #ba242d;
+      transform: translate3d(8px, -8px, 0);
+      cursor: pointer;
     }
   }
 }

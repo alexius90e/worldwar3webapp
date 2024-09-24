@@ -1545,7 +1545,8 @@ img {
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px;
-  border: 1px solid #000;
+  margin-bottom: 40px;
+  border: 1px solid #000000;
   border-radius: 20px;
   background: url(../assets/social-user-bg.jpg) top center/cover no-repeat;
 }
@@ -1555,7 +1556,7 @@ img {
   flex: 0 0 calc(50% - 5px);
   padding: 12px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 12px;
   background-color: #f5f3ee;
 }
@@ -1563,7 +1564,7 @@ img {
   margin: 0 0 10px;
   height: 126px;
   box-sizing: border-box;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-radius: 12px;
 }
 .social__info-user-photo-image {
@@ -1580,7 +1581,7 @@ img {
   line-height: 150%;
   letter-spacing: -0.05em;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 .social__info-user-income {
   position: absolute;
@@ -1604,7 +1605,7 @@ img {
   height: 24px;
   width: 24px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 6px;
   background: url(../assets/more-arrow.svg) center no-repeat;
   background-color: #ba242d;
@@ -1632,7 +1633,7 @@ img {
   line-height: 125%;
   letter-spacing: -0.05em;
   text-align: center;
-  color: #000;
+  color: #000000;
   border-radius: 12px;
 }
 .social__info-following-percent_empty {
@@ -1644,7 +1645,7 @@ img {
   line-height: 150%;
   letter-spacing: -0.05em;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 .social__info-following-income {
   position: absolute;
@@ -1668,7 +1669,7 @@ img {
   height: 24px;
   width: 24px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-radius: 6px;
   background: url(../assets/more-arrow.svg) center no-repeat;
   background-color: #ba242d;
@@ -1719,7 +1720,108 @@ img {
   height: 24px;
   width: 24px;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  background: url(../assets/more-arrow.svg) center no-repeat;
+  background-color: #ba242d;
+  transform: translate3d(8px, -8px, 0);
+  cursor: pointer;
+}
+.social__quests {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+.social__quests-title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 200%;
+  letter-spacing: -0.05em;
+  color: #000000;
+}
+.social__quests-content {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  padding: 0 0 28px;
+}
+.social__quests-content::-webkit-scrollbar {
+  width: 13px;
+}
+.social__quests-content::-webkit-scrollbar-track {
+  background: rgba(249, 247, 243, 0);
+}
+.social__quests-content::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #d0ccc2;
+}
+.social__quests-item {
+  flex: 0 0 calc(100% + 30px);
+  max-width: 340px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  background-color: #dcd8cf;
+}
+.social__quests-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 30px 6px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 16px 16px 0 0;
+  background-color: #1d1c1a;
+}
+.social__quests-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 196px;
+  padding: 30px 20px 20px;
+  box-sizing: border-box;
+}
+.social__quests-item-text {
+  flex: 1 1 auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 250%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000000;
+}
+.social__quests-item-text a {
+  color: #000000;
+}
+.social__quests-item-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social__quests-item_done .social__quests-item-controls .button, .social__quests-item_expired .social__quests-item-controls .button {
+  background-color: #3e3e3e;
+  pointer-events: none;
+  cursor: none;
+}
+.social__quests-item_expired {
+  opacity: 0.5;
+}
+.social__quests-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+  border: 1px solid #000000;
   border-radius: 6px;
   background: url(../assets/more-arrow.svg) center no-repeat;
   background-color: #ba242d;
