@@ -46,11 +46,17 @@ const modalElems = document.querySelectorAll('.modal');
 
 function showModal(modalClassName) {
   const modalElem = document.querySelector(`.${modalClassName}`);
-  if (modalElem) modalElem.classList.add('active');
+  if (modalElem) {
+    modalElem.classList.add('active');
+    document.body.classList.add('hidden');
+  }
 }
 
 function closeModal(modal) {
-  modal.classList.remove('active');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.classList.remove('hidden');
+  }
 }
 
 modalElems.forEach((modal) => {
@@ -61,7 +67,7 @@ modalElems.forEach((modal) => {
 
     if (isModal || isButton) closeModal(modal);
 
-    if (isButtonConfirm) showAlert(alerts.complete);;
+    if (isButtonConfirm) showAlert(alerts.complete);
   });
 });
 
@@ -82,7 +88,6 @@ if (withdrawForm) {
     showModal(modals.withdraw);
   });
 }
-
 
 if (walletTokensCardPointsInfoButton) {
   walletTokensCardPointsInfoButton.addEventListener('click', () => {
@@ -114,9 +119,10 @@ if (walletInfoMore) {
   });
 }
 
-
 const profilePointsInfoButton = document.querySelector('.profile__points-panel-question-button');
-const profileReferralsInfoButton = document.querySelector('.profile__referrals-panel-question-button');
+const profileReferralsInfoButton = document.querySelector(
+  '.profile__referrals-panel-question-button'
+);
 
 if (profilePointsInfoButton) {
   profilePointsInfoButton.addEventListener('click', () => {

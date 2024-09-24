@@ -1,5 +1,7 @@
 .accordion {
   &__main {
+    cursor: pointer;
+
     & > * {
       pointer-events: none;
     }

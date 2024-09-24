@@ -17,6 +17,9 @@ body {
   color: #181d42;
   background-color: #f9f7f3;
 }
+body.hidden {
+  overflow: hidden;
+}
 
 a,
 button,
@@ -174,6 +177,9 @@ img {
   z-index: 98;
 }
 
+.accordion__main {
+  cursor: pointer;
+}
 .accordion__main > * {
   pointer-events: none;
 }
