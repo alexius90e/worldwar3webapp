@@ -1,0 +1,14 @@
+.accordion {
+  &__main {
+    & > * {
+      pointer-events: none;
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height ease-in-out 0.2s;
+    will-change: max-height;
+  }
+}

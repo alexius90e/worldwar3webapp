@@ -1,4 +1,5 @@
 import './custom-select.js';
+import './accordeon.js';
 
 const alerts = { copied: 'copied', complete: 'complete' };
 
@@ -38,6 +39,7 @@ const modals = {
   withdraw: 'modal_complete-withdraw',
   swap: 'modal_complete-swap',
   points: 'modal_points',
+  referrals: 'modal_referrals',
 };
 
 const modalElems = document.querySelectorAll('.modal');
@@ -109,5 +111,21 @@ if (walletInfoMore) {
       event.currentTarget.classList.remove('active');
       navigator.clipboard.writeText(event.currentTarget.dataset.code);
     }
+  });
+}
+
+
+const profilePointsInfoButton = document.querySelector('.profile__points-panel-question-button');
+const profileReferralsInfoButton = document.querySelector('.profile__referrals-panel-question-button');
+
+if (profilePointsInfoButton) {
+  profilePointsInfoButton.addEventListener('click', () => {
+    showModal(modals.points);
+  });
+}
+
+if (profileReferralsInfoButton) {
+  profileReferralsInfoButton.addEventListener('click', () => {
+    showModal(modals.referrals);
   });
 }

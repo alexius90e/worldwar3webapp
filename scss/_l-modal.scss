@@ -25,12 +25,14 @@
 
   &__body {
     max-width: calc(100vw - 40px);
+    max-height: 90vh;
     width: 360px;
     height: fit-content;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 12px;
     background-color: #ffffff;
+    overflow: auto;
     transition: transform ease-in-out 0.2s;
     transform: translateY(-100vh);
 
@@ -77,6 +79,31 @@
 
       & b {
         font-weight: 700;
+      }
+
+      &_flex {
+        display: flex;
+        gap: 5px;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+      }
+
+      &_flex &-title {
+        flex: 0 0 84px;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+      }
+
+      &_flex &-text {
+        padding-top: 2px;
       }
     }
   }
