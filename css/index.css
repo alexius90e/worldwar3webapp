@@ -1449,6 +1449,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: 2;
+  border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .profile__nav-link::after {
@@ -1496,6 +1497,7 @@ img {
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 
 .social-connect {
@@ -1521,6 +1523,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 0 32px;
 }
 .social-connect__figure-image {
   display: block;
