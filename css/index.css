@@ -1536,3 +1536,193 @@ img {
   align-items: flex-end;
   flex: 1 1 auto;
 }
+
+.social {
+  padding: 20px 0 110px;
+}
+.social__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: url(../assets/social-user-bg.jpg) top center/cover no-repeat;
+}
+.social__info-user {
+  position: relative;
+  z-index: 5;
+  flex: 0 0 calc(50% - 5px);
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 12px;
+  background-color: #f5f3ee;
+}
+.social__info-user-photo {
+  margin: 0 0 10px;
+  height: 126px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+.social__info-user-photo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.social__info-user-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+}
+.social__info-user-income {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+  border-radius: 11px 0;
+  background-color: #ba242d;
+}
+.social__info-user-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: url(../assets/more-arrow.svg) center no-repeat;
+  background-color: #ba242d;
+  transform: translate3d(8px, -8px, 0);
+  cursor: pointer;
+}
+.social__info-following {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 calc(50% - 5px);
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #f5f3ee;
+}
+.social__info-following-percent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -8px 10px;
+  height: 126px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+  border-radius: 12px;
+}
+.social__info-following-percent_empty {
+  opacity: 0.2;
+}
+.social__info-following-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+}
+.social__info-following-income {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+  border-radius: 11px 0;
+  background-color: #ba242d;
+}
+.social__info-following-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: url(../assets/more-arrow.svg) center no-repeat;
+  background-color: #ba242d;
+  transform: translate3d(8px, -8px, 0);
+  cursor: pointer;
+}
+.social__info-wallet {
+  flex: 1 1 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background-color: #ba242d;
+}
+.social__info-wallet-cash {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+}
+.social__info-wallet-token {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fff;
+}
+.social__info-faq {
+  position: relative;
+  padding: 20px 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+  border-radius: 12px;
+  background-color: #a5a5a5;
+}
+.social__info-faq b {
+  font-weight: 700;
+}
+.social__info-faq-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: url(../assets/more-arrow.svg) center no-repeat;
+  background-color: #ba242d;
+  transform: translate3d(8px, -8px, 0);
+  cursor: pointer;
+}
