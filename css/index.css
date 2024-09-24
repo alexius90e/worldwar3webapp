@@ -1497,3 +1497,39 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.social-connect {
+  padding: 20px 0 110px;
+}
+.social-connect .container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 130px);
+}
+.social-connect__title {
+  max-width: 360px;
+  margin: 0 auto 20px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 136%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.social-connect__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-connect__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.social-connect__controls {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 1 auto;
+}

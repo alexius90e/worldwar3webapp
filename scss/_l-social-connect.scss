@@ -1,0 +1,40 @@
+.social-connect {
+  padding: 20px 0 110px;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 130px);
+  }
+
+  &__title {
+    max-width: 360px;
+    margin: 0 auto 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 136%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1 1 auto;
+  }
+}
