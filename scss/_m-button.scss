@@ -26,6 +26,10 @@
     filter: brightness(1.2);
   }
 
+  &:disabled {
+    background-color: #a5a5a5;
+  }
+
   &_light {
     background-color: #a5a5a5;
   }

@@ -199,3 +199,17 @@ if (socialFilterSortCheckboxInput) {
     }
   });
 }
+
+window.addEventListener('scroll', (event) => {
+  const fourthSocialUsersCard = document.querySelector('.social__users-card:nth-child(4)');
+  const socialUsersBack = document.querySelector('.social__users-back');
+  if (fourthSocialUsersCard && socialUsersBack) {
+    const delta = fourthSocialUsersCard.offsetTop - event.currentTarget.pageYOffset;
+
+    if (delta >= 0)  {
+      socialUsersBack.style.display = 'none'
+    } else {
+      socialUsersBack.style.display = 'block'
+    }
+  }
+});
