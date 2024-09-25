@@ -1841,9 +1841,6 @@ img {
   transform: translate3d(8px, -8px, 0);
   cursor: pointer;
 }
-.social__newcomers {
-  margin: 0 0 40px;
-}
 .social__newcomers-title {
   margin: 0 0 20px;
   font-weight: 700;
@@ -1908,7 +1905,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0 0 40px;
+  padding: 40px 0;
 }
 .social__filter-search-input {
   display: inline-block;
