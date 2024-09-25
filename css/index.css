@@ -1050,6 +1050,7 @@ img {
   -webkit-backdrop-filter: blur(0);
           backdrop-filter: blur(0);
   background: rgba(32, 32, 32, 0);
+  opacity: 0;
 }
 .modal.active {
   display: flex;
@@ -1060,7 +1061,8 @@ img {
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   background: rgba(32, 32, 32, 0.5);
-  transition-property: z-index;
+  opacity: 1;
+  transition-property: z-index opacity;
   transition-delay: 0.1s;
 }
 .modal__body {
@@ -1108,6 +1110,10 @@ img {
   padding: 0;
   list-style-type: none;
 }
+.modal__list_typed {
+  list-style-type: decimal;
+  margin-left: 24px;
+}
 .modal__list-item {
   font-weight: 400;
   font-size: 14px;
@@ -1135,6 +1141,9 @@ img {
 }
 .modal__list-item_flex .modal__list-item-text {
   padding-top: 2px;
+}
+.modal__list_typed .modal__list-item {
+  font-weight: 700;
 }
 .modal__points {
   display: flex;

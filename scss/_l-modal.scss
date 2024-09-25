@@ -10,6 +10,7 @@
   pointer-events: none;
   backdrop-filter: blur(0);
   background: rgba(32, 32, 32, 0);
+  opacity: 0;
 
   &.active {
     display: flex;
@@ -18,8 +19,8 @@
     z-index: 200;
     pointer-events: all;
     backdrop-filter: blur(12px);
-    background: rgba(32, 32, 32, 0.5);
-    transition-property: z-index;
+    background: rgba(32, 32, 32, 0.5);opacity: 1;
+    transition-property: z-index opacity;
     transition-delay: 0.1s;
   }
 
@@ -72,6 +73,11 @@
     padding: 0;
     list-style-type: none;
 
+    &_typed {
+      list-style-type: decimal;
+      margin-left: 24px;
+    }
+
     &-item {
       font-weight: 400;
       font-size: 14px;
@@ -105,6 +111,10 @@
       &_flex &-text {
         padding-top: 2px;
       }
+    }
+
+    &_typed &-item{
+      font-weight: 700;
     }
   }
 

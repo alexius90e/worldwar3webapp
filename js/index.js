@@ -40,6 +40,9 @@ const modals = {
   swap: 'modal_complete-swap',
   points: 'modal_points',
   referrals: 'modal_referrals',
+  socialUser: 'modal_social-user',
+  socialFollowing: 'modal_social-following',
+  socialFaq: 'modal_social-faq',
 };
 
 const modalElems = document.querySelectorAll('.modal');
@@ -206,10 +209,24 @@ window.addEventListener('scroll', (event) => {
   if (fourthSocialUsersCard && socialUsersBack) {
     const delta = fourthSocialUsersCard.offsetTop - event.currentTarget.pageYOffset;
 
-    if (delta >= 0)  {
-      socialUsersBack.style.display = 'none'
+    if (delta >= 0) {
+      socialUsersBack.style.display = 'none';
     } else {
-      socialUsersBack.style.display = 'block'
+      socialUsersBack.style.display = 'block';
     }
   }
 });
+
+const socialUserButton = document.querySelector('.social__info-user-more');
+const socialFollowingButton = document.querySelector('.social__info-following-more');
+const socialFaqButton = document.querySelector('.social__info-faq-more');
+
+if (socialUserButton) {
+  socialUserButton.addEventListener('click', () => showModal(modals.socialUser));
+}
+if (socialFollowingButton) {
+  socialFollowingButton.addEventListener('click', () => showModal(modals.socialFollowing));
+}
+if (socialFaqButton) {
+  socialFaqButton.addEventListener('click', () => showModal(modals.socialFaq));
+}
