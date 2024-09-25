@@ -135,3 +135,31 @@ if (profileReferralsInfoButton) {
     showModal(modals.referrals);
   });
 }
+
+if (Swiper) {
+  const sidebarSwiperOptions = {
+    speed: 4000,
+    loop: true,
+    slidesPerView: 1.25,
+    spaceBetween: 10,
+    centeredSlides: true,
+    allowTouchMove: false,
+  };
+  
+  const socialNewcomersSliderTop = new Swiper('.swiper.social__newcomers-slider-top', {
+    ...sidebarSwiperOptions,
+    autoplay: {
+      delay: 0,
+    },
+  });
+  
+  const socialNewcomersSliderBottom = new Swiper('.swiper.social__newcomers-slider-bottom', {
+    ...sidebarSwiperOptions,
+    autoplay: {
+      delay: 0,
+      reverseDirection: true,
+    },
+  });
+}
+
+
