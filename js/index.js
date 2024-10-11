@@ -139,31 +139,7 @@ if (profileReferralsInfoButton) {
   });
 }
 
-if (Swiper) {
-  const sidebarSwiperOptions = {
-    speed: 3000,
-    loop: true,
-    slidesPerView: 1.25,
-    spaceBetween: 10,
-    centeredSlides: true,
-    allowTouchMove: false,
-  };
 
-  const socialNewcomersSliderTop = new Swiper('.swiper.social__newcomers-slider-top', {
-    ...sidebarSwiperOptions,
-    autoplay: {
-      delay: 0,
-    },
-  });
-
-  const socialNewcomersSliderBottom = new Swiper('.swiper.social__newcomers-slider-bottom', {
-    ...sidebarSwiperOptions,
-    autoplay: {
-      delay: 0,
-      reverseDirection: true,
-    },
-  });
-}
 
 const socialFilterSortElem = document.querySelector('.social__filter-sort');
 
@@ -229,4 +205,40 @@ if (socialFollowingButton) {
 }
 if (socialFaqButton) {
   socialFaqButton.addEventListener('click', () => showModal(modals.socialFaq));
+}
+
+const gamesItemTagButtons = document.querySelectorAll('.games__item-tag-button');
+console.log(gamesItemTagButtons)
+
+gamesItemTagButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    showModal(modals.points);
+  });
+});
+
+
+if (Swiper) {
+  const sidebarSwiperOptions = {
+    speed: 3000,
+    loop: true,
+    slidesPerView: 1.25,
+    spaceBetween: 10,
+    centeredSlides: true,
+    allowTouchMove: false,
+  };
+
+  const socialNewcomersSliderTop = new Swiper('.swiper.social__newcomers-slider-top', {
+    ...sidebarSwiperOptions,
+    autoplay: {
+      delay: 0,
+    },
+  });
+
+  const socialNewcomersSliderBottom = new Swiper('.swiper.social__newcomers-slider-bottom', {
+    ...sidebarSwiperOptions,
+    autoplay: {
+      delay: 0,
+      reverseDirection: true,
+    },
+  });
 }
