@@ -139,8 +139,6 @@ if (profileReferralsInfoButton) {
   });
 }
 
-
-
 const socialFilterSortElem = document.querySelector('.social__filter-sort');
 
 if (socialFilterSortElem) {
@@ -208,14 +206,12 @@ if (socialFaqButton) {
 }
 
 const gamesItemTagButtons = document.querySelectorAll('.games__item-tag-button');
-console.log(gamesItemTagButtons)
 
 gamesItemTagButtons.forEach((button) => {
   button.addEventListener('click', () => {
     showModal(modals.points);
   });
 });
-
 
 if (Swiper) {
   const sidebarSwiperOptions = {
